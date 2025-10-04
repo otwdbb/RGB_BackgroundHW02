@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="top|left"
+    android:textAlignment="textEnd"
+    app:layout_insetEdge="none"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_v_redNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="22dp"
+        android:text="Red:"
+        app:layout_constraintBottom_toTopOf="@+id/tv_v_greenNum"
+        app:layout_constraintStart_toStartOf="@+id/sb_v_redNum" />
+
+    <TextView
+        android:id="@+id/tv_v_greenNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginBottom="21dp"
+        android:text="Green:"
+        app:layout_constraintBottom_toTopOf="@+id/tv_v_blueNum"
+        app:layout_constraintStart_toStartOf="@+id/sb_v_greenNum" />
+
+    <TextView
+        android:id="@+id/tv_v_blueNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="151dp"
+        android:text="Blue:"
+        app:layout_constraintStart_toStartOf="@+id/sb_v_blueNum"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_v_saveColor"
+        android:layout_width="389dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="65dp"
+        android:text="Save Color"
+        app:layout_constraintEnd_toEndOf="@+id/tv_v_hexNum"
+        app:layout_constraintStart_toEndOf="@+id/tv_v_hexNum"
+        app:layout_constraintTop_toBottomOf="@+id/tv_v_blueNum" />
+
+    <ListView
+        android:id="@+id/lv_v_colors"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_v_saveColor" />
+
+    <SeekBar
+        android:id="@+id/sb_v_redNum"
+        android:layout_width="0dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="15dp"
+        android:backgroundTint="#C3B4B4"
+        android:max="255"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_v_greenNum"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_v_redNum" />
+
+    <SeekBar
+        android:id="@+id/sb_v_greenNum"
+        android:layout_width="0dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="13dp"
+        android:max="255"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_v_blueNum"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sb_v_redNum" />
+
+    <SeekBar
+        android:id="@+id/sb_v_blueNum"
+        android:layout_width="0dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="41dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="42dp"
+        android:max="255"
+        app:layout_constraintBottom_toTopOf="@+id/btn_v_saveColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/sb_v_greenNum" />
+
+    <TextView
+        android:id="@+id/tv_v_hexState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:text="Hex Respresentation:"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_v_hexNum"
+        app:layout_constraintStart_toStartOf="@+id/sb_v_blueNum" />
+
+    <TextView
+        android:id="@+id/tv_v_hexNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="7dp"
+        android:text="FFFFFF"
+        app:layout_constraintStart_toEndOf="@+id/tv_v_hexState"
+        app:layout_constraintTop_toBottomOf="@+id/sb_v_blueNum" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="14dp"
+        android:background="#673AB7"
+        android:text="Hw01_RGB"
+        android:textAlignment="viewStart"
+        android:textColor="#E6DFDF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_v_redNum"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+</androidx.constraintlayout.widget.ConstraintLayout>
