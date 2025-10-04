@@ -19,10 +19,15 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
+    //==========================================
+    //Author : Brett Brown
+    //Date   : 09-30-2025
+    //Desc   : RGB Slider
+    //==========================================
    static private ArrayList<ColorInfo> colorInfo;
    private View mainBackground;
 
-   String[] test = {"i", "am", "testing"};
+  // String[] test = {"i", "am", "testing"};
    ColorListAdapter ciAdapter;
 
 
@@ -198,7 +203,7 @@ public class MainActivity extends AppCompatActivity {
 
                 //need to make the colors of the letters black if to bright
                 //white if too dark
-                // going to use the luminance formula
+                //going to use the luminance formula
 
                 double brightness = (0.299 * r + 0.587 * g + 0.114 * b);
 
@@ -240,6 +245,7 @@ public class MainActivity extends AppCompatActivity {
 
      private void fillListView()
     {
+        //Link the custom adapter to the listview and display the saved colors
         ciAdapter = new ColorListAdapter(this, colorInfo);
         lv_j_colors.setAdapter(ciAdapter);
     }
